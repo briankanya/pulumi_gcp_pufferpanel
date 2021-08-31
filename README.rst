@@ -11,7 +11,7 @@ pulumi-gcp-pufferpanel
         :alt: Documentation Status
 
 
-Pulumi ComponentResource for running `PufferPanel <https://github.com/PufferPanel/PufferPanel>`
+Pulumi ComponentResource for running PufferPanel_
 
 
 * Free software: GNU General Public License v3
@@ -31,3 +31,4 @@ This package was created with Cookiecutter_ and the `elgertam/cookiecutter-pipen
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`elgertam/cookiecutter-pipenv`: https://github.com/elgertam/cookiecutter-pipenv
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _PufferPanel: https://github.com/PufferPanel/PufferPanel
