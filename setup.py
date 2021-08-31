@@ -46,6 +46,6 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/briankanya/pulumi_gcp_pufferpanel",
-    version="0.4.0",
+    version="0.4.1",
     zip_safe=False,
 )
