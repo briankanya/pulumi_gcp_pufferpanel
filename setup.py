@@ -34,7 +34,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
-    description="Pulumi ComponentResource for running [PufferPanel](https://github.com/PufferPanel/PufferPanel)",
+    description="Pulumi ComponentResource for running PufferPanel - https://github.com/PufferPanel/PufferPanel",
     install_requires=requirements,
     license="GNU General Public License v3",
     long_description=readme + "\n\n" + history,
@@ -46,6 +46,6 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/briankanya/pulumi_gcp_pufferpanel",
-    version="0.3.0",
+    version="0.1.0",
     zip_safe=False,
 )
