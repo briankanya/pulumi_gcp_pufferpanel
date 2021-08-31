@@ -15,7 +15,7 @@ Pulumi ComponentResource for running PufferPanel_
 
 
 * Free software: GNU General Public License v3
-* Documentation: https://pulumi-gcp-pufferpanel.readthedocs.io.
+* Documentation: https://pulumi-gcp-pufferpanel.readthedocs.io/en/latest/
 
 
 Features
