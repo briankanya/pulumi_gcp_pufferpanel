@@ -11,7 +11,7 @@ pulumi-gcp-pufferpanel
         :alt: Documentation Status
 
 
-Pulumi ComponentResource for running `PufferPanel <(https://github.com/PufferPanel/PufferPanel>`
+Pulumi ComponentResource for running `PufferPanel <https://github.com/PufferPanel/PufferPanel>`
 
 
 * Free software: GNU General Public License v3
