@@ -1,5 +1,5 @@
 Welcome to pulumi-gcp-pufferpanel's documentation!
-======================================
+==================================================
 
 .. toctree::
    :maxdepth: 2
