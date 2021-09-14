@@ -1,7 +1,7 @@
 GNU GENERAL PUBLIC LICENSE
                       Version 3, 29 June 2007
 
-    Pulumi ComponentResource for running [PufferPanel](https://github.com/PufferPanel/PufferPanel)
+    Pulumi ComponentResource for running PufferPanel_
     Copyright (C) 2021  Brian Kanya
 
     This program is free software: you can redistribute it and/or modify
@@ -31,3 +31,4 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
 
+.. _PufferPanel: https://github.com/PufferPanel/PufferPanel
