@@ -54,5 +54,5 @@ pulumi.runtime.set_mocks(MyMocks())
 def test_create_pufferpanel_server() -> None:
     """Test whether instantiating PufferPanel works."""
     _ = PufferPanel(
-        name="PufferPanelServer", dns_name="bkanya.com", dns_zone="example-com-15fbd9a"
+        name="PufferPanelServer", dns_name="example.com", dns_zone="example-com-15fbd9a"
     )
