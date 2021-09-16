@@ -102,7 +102,7 @@ def __create_record(dns_name: str, dns_zone: str, project: str, ip: str) -> None
 
 
 def http(_: Request) -> tuple:
-    """TODO."""
+    """Associate PufferPanel server public ip with given dns name."""
     compute = build("compute", "v1")
     disk_id = os.environ["DISK_ID"]
     dns_name = os.environ["DNS_NAME"]
