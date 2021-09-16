@@ -94,7 +94,6 @@ max_line_length = 99
 show_source = true
 docstring-convention = "google"
 extended_default_ignore = []
-exclude = ["src/pulumi_gcp_pufferpanel/__init__.py", "src/pulumi_gcp_pufferpanel/pulumi_gcp_pufferpanel.py"]
 
 [tool.flakehell.plugins]
 pyflakes = ["+*"]
