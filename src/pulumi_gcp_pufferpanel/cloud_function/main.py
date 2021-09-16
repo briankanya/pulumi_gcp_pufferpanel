@@ -2,14 +2,15 @@
 
 import os
 import time
-from typing import Any
 
-import googleapiclient.discovery
-from google.cloud import dns
+from flask import Request
+from google.cloud.dns import Client  # type: ignore
+from googleapiclient.discovery import Resource, build  # type: ignore
+from googleapiclient.errors import HttpError  # type: ignore
 
 
 def __create_instance(
-    compute: googleapiclient.discovery.Resource,
+    compute: Resource,
     disk_id: str,
     machine_type: str,
     project: str,
@@ -63,21 +64,15 @@ def __create_instance(
     return compute.instances().insert(project=project, zone=zone, body=config).execute()
 
 
-def __delete_instance(
-    compute: googleapiclient.discovery.Resource, project: str, server_name: str, zone: str
-) -> dict:
+def __delete_instance(compute: Resource, project: str, server_name: str, zone: str) -> dict:
     return compute.instances().delete(project=project, zone=zone, instance=server_name).execute()
 
 
-def __get_instance(
-    compute: googleapiclient.discovery.Resource, project: str, server_name: str, zone: str
-) -> dict:
+def __get_instance(compute: Resource, project: str, server_name: str, zone: str) -> dict:
     return compute.instances().get(project=project, zone=zone, instance=server_name).execute()
 
 
-def __wait_for_operation(
-    compute: googleapiclient.discovery.Resource, project: str, operation: dict, zone: str
-) -> dict:
+def __wait_for_operation(compute: Resource, project: str, operation: dict, zone: str) -> dict:
     while True:
         result = (
             compute.zoneOperations().get(project=project, zone=zone, operation=operation).execute()
@@ -92,8 +87,8 @@ def __wait_for_operation(
         time.sleep(1)
 
 
-def __create_record(dns_name: str, dns_zone: str, project: str, ip: str) -> dict:
-    dns_client = dns.Client(project=project)
+def __create_record(dns_name: str, dns_zone: str, project: str, ip: str) -> None:
+    dns_client = Client(project=project)
     zone = dns_client.zone(name=dns_zone)
     changes = zone.changes()
     rrs = zone.resource_record_set(dns_name, record_type="A", ttl=300, rrdatas=[ip])
@@ -106,9 +101,9 @@ def __create_record(dns_name: str, dns_zone: str, project: str, ip: str) -> dict
     changes.create()
 
 
-def http(_: Any) -> tuple:
+def http(_: Request) -> tuple:
     """TODO."""
-    compute = googleapiclient.discovery.build("compute", "v1")
+    compute = build("compute", "v1")
     disk_id = os.environ["DISK_ID"]
     dns_name = os.environ["DNS_NAME"]
     dns_zone = os.environ["DNS_ZONE"]
@@ -125,7 +120,7 @@ def http(_: Any) -> tuple:
     try:
         instance = __get_instance(compute, project, server_name, zone)
         operation = __delete_instance(compute, project, instance["name"], zone)
-    except googleapiclient.errors.HttpError:
+    except HttpError:
         operation = __create_instance(compute, disk_id, machine_type, project, server_name, zone)
 
     if operation:
@@ -134,9 +129,9 @@ def http(_: Any) -> tuple:
 
         if "insert" in response_message:
             response_message = response_message.replace("insert", "create")
-            ip = __get_instance(compute, project, server_name, zone)
+            instance = __get_instance(compute, project, server_name, zone)
             ip = (
-                ip.pop("networkInterfaces", [{}])
+                instance.pop("networkInterfaces", [{}])
                 .pop(0)
                 .pop("accessConfigs", [{}])
                 .pop(0)
