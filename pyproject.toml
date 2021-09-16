@@ -63,6 +63,7 @@ safety = "^1.10.3"
 sphinx = "^4.1.1"
 watchdog = {version = "^2.1.3", extras = ["watchmedo"]}
 xdoctest = "^0.15.5"
+Flask = "^2.0.1"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
