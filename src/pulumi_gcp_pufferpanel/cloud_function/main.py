@@ -1,4 +1,4 @@
-"""Cloud function."""
+"""Cloud function used to associate created server with a dns name."""
 
 import os
 import time
