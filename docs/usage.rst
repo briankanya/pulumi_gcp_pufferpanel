@@ -4,4 +4,4 @@ Usage
 
 To use pulumi-gcp-pufferpanel in a project::
 
-    import pulumi_gcp_pufferpanel
+    from pulumi_gcp_pufferpanel.pulumi_gcp_pufferpanel import PufferPanel
