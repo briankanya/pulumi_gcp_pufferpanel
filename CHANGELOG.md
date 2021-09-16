@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.4.2] - 2021-09-13
+## [0.4.1] - 2021-08-31
 
 ### Added
 
 - First release on PyPI.
 
-[Unreleased]: https://github.com/briankanya/pulumi-gcp-pufferpanel/compare/v0.4.2...HEAD
-[0.4.2]: https://github.com/briankanya/pulumi-gcp-pufferpanel/compare/releases/tag/v0.4.2
+[Unreleased]: https://github.com/briankanya/pulumi-gcp-pufferpanel/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/briankanya/pulumi-gcp-pufferpanel/compare/releases/tag/v0.4.1
