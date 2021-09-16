@@ -1,9 +1,10 @@
 """Main module."""
 
+from pathlib import Path
 from typing import Optional
 
 from pulumi import ComponentResource, ResourceOptions
-from pulumi.asset import FileAsset
+from pulumi.asset import FileArchive
 from pulumi_gcp.cloudfunctions import Function, FunctionIamMember
 from pulumi_gcp.compute import AwaitableGetImageResult, Disk, get_image
 from pulumi_gcp.config import zone  # type: ignore
@@ -125,7 +126,9 @@ class PufferPanel(ComponentResource):
 
     def __create_code_bucket_object(self, bucket: Bucket) -> BucketObject:
         return BucketObject(
-            "pufferpanel-bucket-object", bucket=bucket.name, source=FileAsset("cloud_function")
+            "pufferpanel-bucket-object",
+            bucket=bucket.name,
+            source=FileArchive(str(Path(__file__).parent.resolve().joinpath("cloud_function"))),
         )
 
     def __create_function(
