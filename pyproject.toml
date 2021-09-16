@@ -103,6 +103,9 @@ mccabe = ["+*"]
 "flake8-*" = ["+*"]
 darglint = ["+*"]
 
+[tool.flakehell.exceptions."src/"]
+flake8-annotations = ["-ANN101"]
+
 [tool.flakehell.exceptions."tests/"]
 flake8-bandit = ["-S101"]
 
