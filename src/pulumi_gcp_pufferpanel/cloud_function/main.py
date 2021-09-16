@@ -3,7 +3,7 @@
 import os
 import time
 
-from flask import Request
+from flask import Request  # type: ignore
 from google.cloud.dns import Client  # type: ignore
 from googleapiclient.discovery import Resource, build  # type: ignore
 from googleapiclient.errors import HttpError  # type: ignore
