@@ -74,7 +74,7 @@ branch = true
 source = ["pulumi_gcp_pufferpanel"]
 
 [tool.coverage.report]
-fail_under = 100
+fail_under = 80
 exclude_lines = [
   "pragma: no cover",
   "def __repr__",
