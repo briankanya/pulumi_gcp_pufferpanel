@@ -4,7 +4,8 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/pulumi-gcp-pufferpanel.svg)](https://pypi.python.org/pypi/pulumi-gcp-pufferpanel)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pulumi-gcp-pufferpanel.svg)](https://pypi.python.org/pypi/pulumi-gcp-pufferpanel)
 [![Tests](https://github.com/briankanya/pulumi-gcp-pufferpanel/workflows/tests/badge.svg)](https://github.com/briankanya/pulumi-gcp-pufferpanel/actions?workflow=tests)
-[![Codecov](https://codecov.io/gh/briankanya/pulumi-gcp-pufferpanel/branch/main/graph/badge.svg)](https://codecov.io/gh/briankanya/pulumi-gcp-pufferpanel)
+[![Codecov](https://codecov.io/gh/briankanya/pulumi-gcp-pufferpanel/branch/main/graph/badge.svg?token=W5Z7N8OUTW)](https://codecov.io/gh/briankanya/pulumi-gcp-pufferpanel)
+
 [![Read the Docs](https://readthedocs.org/projects/pulumi-gcp-pufferpanel/badge/)](https://pulumi-gcp-pufferpanel.readthedocs.io/)
 [![PyPI - License](https://img.shields.io/pypi/l/pulumi-gcp-pufferpanel.svg)](https://pypi.python.org/pypi/pulumi-gcp-pufferpanel)
 
