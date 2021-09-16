@@ -15,6 +15,7 @@ class PufferPanel(ComponentResource):
 
     Attributes:
         code_bucket (Bucket): Bucket containing code used for cloud function
+        code_bucket_object (BucketObject): Object containing code archive used for cloud function
         function (Function): Cloud function used to associate created server with a dns name.
         machine_disk (Disk): Disk used for created machines.
         machine_image (AwaitableGetImageResult): Base image used for created disk.
@@ -85,6 +86,11 @@ class PufferPanel(ComponentResource):
     def code_bucket(self) -> Bucket:
         """Return bucket containing code used for cloud function."""
         return self._code_bucket
+
+    @property
+    def code_bucket_object(self) -> BucketObject:
+        """Return object containing code archive used for cloud function."""
+        return self._code_bucket_object
 
     @property
     def function(self) -> Function:
