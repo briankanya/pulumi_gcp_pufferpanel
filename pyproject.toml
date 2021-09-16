@@ -1,7 +1,7 @@
 
 [tool.poetry]
 name = "pulumi-gcp-pufferpanel"
-version = "0.4.1"
+version = "0.4.2"
 description = "Pulumi ComponentResource for running PufferPanel_"
 authors = ["Brian Kanya <briankanya@gmail.com>"]
 
