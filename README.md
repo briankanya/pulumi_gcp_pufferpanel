@@ -18,7 +18,7 @@ Pulumi ComponentResource for running [PufferPanel](https://github.com/PufferPane
 
 ## Useful links
 
-* GitHub repo: <https://github.com/briankanya/pulumi-gcp-pufferpanel.git>
+* GitHub repo: <https://github.com/briankanya/pulumi-gcp-pufferpanel>
 * Documentation: <https://pulumi-gcp-pufferpanel.readthedocs.io>
 * Free software: GNU General Public License v3
 
