@@ -532,7 +532,7 @@ grpc = ["grpcio (>=1.8.2,<2.0dev)"]
 
 [[package]]
 name = "google-cloud-dns"
-version = "0.33.0"
+version = "0.33.1"
 description = "Google Cloud DNS API client library"
 category = "dev"
 optional = false
@@ -1369,7 +1369,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.7"
-content-hash = "f3126ec9d2ec3ff4c4d84c29d8de122e2579f8079cc9f50ce7f567db6885094d"
+content-hash = "90c2bb3f60e04a8487416faffc176f3d3b398347222f0833f50778ff47785601"
 
 [metadata.files]
 alabaster = [
@@ -1596,8 +1596,8 @@ google-cloud-core = [
     {file = "google_cloud_core-2.0.0-py2.py3-none-any.whl", hash = "sha256:31785d1e1d02f90ad3f1b020d4aed63db4865c3394ff7c128a296b6995eef31f"},
 ]
 google-cloud-dns = [
-    {file = "google-cloud-dns-0.33.0.tar.gz", hash = "sha256:88f009333c5e7d18cb034b4651f8c0b35e5926f732054241d5008c7cc068f7a2"},
-    {file = "google_cloud_dns-0.33.0-py2.py3-none-any.whl", hash = "sha256:ec1c8f4c46dd7981a0a142dbb44a935832d8b0078835225dee89567705bdf358"},
+    {file = "google-cloud-dns-0.33.1.tar.gz", hash = "sha256:e4aa73fc6ca22764fd7294de19b602dff084d924c77366c136fb9c28e70ae739"},
+    {file = "google_cloud_dns-0.33.1-py2.py3-none-any.whl", hash = "sha256:f1e2bac7ce2b620c15f2646732b15fb07f420b700d7d231eee7494c7e62cd848"},
 ]
 googleapis-common-protos = [
     {file = "googleapis-common-protos-1.53.0.tar.gz", hash = "sha256:a88ee8903aa0a81f6c3cec2d5cf62d3c8aa67c06439b0496b49048fb1854ebf4"},
