@@ -281,14 +281,14 @@ pyflakes = ">=2.3.0,<2.4.0"
 
 [[package]]
 name = "flake8-annotations"
-version = "2.6.2"
+version = "2.7.0"
 description = "Flake8 Type Annotation Checks"
 category = "dev"
 optional = false
-python-versions = ">=3.6.1,<4.0.0"
+python-versions = ">=3.6.2,<4.0.0"
 
 [package.dependencies]
-flake8 = ">=3.7,<4.0"
+flake8 = ">=3.7,<5.0"
 typed-ast = {version = ">=1.4,<2.0", markers = "python_version < \"3.8\""}
 
 [[package]]
@@ -470,7 +470,7 @@ uritemplate = ">=3.0.0,<4dev"
 
 [[package]]
 name = "google-api-python-client-stubs"
-version = "1.5.1"
+version = "1.7.1"
 description = "Type stubs for google-api-python-client"
 category = "dev"
 optional = false
@@ -478,7 +478,7 @@ python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
 google-api-python-client = ">=2.23.0,<3.0.0"
-typing-extensions = ">=3.7.4.3,<4.0.0.0"
+typing-extensions = ">=3.10.0,<4.0.0"
 
 [[package]]
 name = "google-auth"
@@ -1363,7 +1363,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.7"
-content-hash = "fb9f3f25193a3f491185e7f1e63d3b2d874974ce3835e34c7f7212588c988c74"
+content-hash = "4bc3dc4d93600e27f7aa31bca459ff6195ccd68bd1a631817bdd06039df04b37"
 
 [metadata.files]
 alabaster = [
@@ -1500,8 +1500,8 @@ flake8 = [
     {file = "flake8-3.9.2.tar.gz", hash = "sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b"},
 ]
 flake8-annotations = [
-    {file = "flake8-annotations-2.6.2.tar.gz", hash = "sha256:0d6cd2e770b5095f09689c9d84cc054c51b929c41a68969ea1beb4b825cac515"},
-    {file = "flake8_annotations-2.6.2-py3-none-any.whl", hash = "sha256:d10c4638231f8a50c0a597c4efce42bd7b7d85df4f620a0ddaca526138936a4f"},
+    {file = "flake8-annotations-2.7.0.tar.gz", hash = "sha256:52e53c05b0c06cac1c2dec192ea2c36e85081238add3bd99421d56f574b9479b"},
+    {file = "flake8_annotations-2.7.0-py3-none-any.whl", hash = "sha256:3edfbbfb58e404868834fe6ec3eaf49c139f64f0701259f707d043185545151e"},
 ]
 flake8-bandit = [
     {file = "flake8_bandit-2.1.2.tar.gz", hash = "sha256:687fc8da2e4a239b206af2e54a90093572a60d0954f3054e23690739b0b0de3b"},
@@ -1553,8 +1553,8 @@ google-api-python-client = [
     {file = "google_api_python_client-2.23.0-py2.py3-none-any.whl", hash = "sha256:a7b364eff63ca75d827cfb241a0f8567157976e879046c1ff20ddf735bad618e"},
 ]
 google-api-python-client-stubs = [
-    {file = "google-api-python-client-stubs-1.5.1.tar.gz", hash = "sha256:e07f94cce3a1760ec8f5f1470069ba72c48bd5573158ee48ed7118d2388e49bd"},
-    {file = "google_api_python_client_stubs-1.5.1-py3-none-any.whl", hash = "sha256:ae6566cdf65d644a6837cd30990f1479e449fbaed140c60631abe094bcd3e483"},
+    {file = "google-api-python-client-stubs-1.7.1.tar.gz", hash = "sha256:59d2bd0d77e4b40fee5e9f8531eae1bee536e64e972ca2b76d8068a4f2a9e661"},
+    {file = "google_api_python_client_stubs-1.7.1-py3-none-any.whl", hash = "sha256:42bdde2ec8db24bae6cee17863dfaf0652dd8b004f05509cc1a789ef5059a7a0"},
 ]
 google-auth = [
     {file = "google-auth-2.2.1.tar.gz", hash = "sha256:6dc8173abd50f25b6e62fc5b42802c96fc7cd9deb9bfeeb10a79f5606225cdf4"},
