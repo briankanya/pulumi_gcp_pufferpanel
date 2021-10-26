@@ -837,7 +837,7 @@ six = ">=1.12.0"
 
 [[package]]
 name = "pulumi-gcp"
-version = "5.23.0"
+version = "5.24.0"
 description = "A Pulumi package for creating and managing Google Cloud Platform resources."
 category = "main"
 optional = false
@@ -1809,7 +1809,7 @@ pulumi = [
     {file = "pulumi-3.14.0-py2.py3-none-any.whl", hash = "sha256:e1f3ec0121cc7f6999afb19eca9caba0b9c1913da791dd57cf81002d36103647"},
 ]
 pulumi-gcp = [
-    {file = "pulumi_gcp-5.23.0.tar.gz", hash = "sha256:11131ccf87148ec9ed1dfd71c3acf2f88cb5cea314c8b027c97510ca45d1fa4a"},
+    {file = "pulumi_gcp-5.24.0.tar.gz", hash = "sha256:343d2c87c50bf5c83e3023b880c63adfd6b17a5066ffd0e1aa4f43f8cd56be5b"},
 ]
 py = [
     {file = "py-1.10.0-py2.py3-none-any.whl", hash = "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"},
