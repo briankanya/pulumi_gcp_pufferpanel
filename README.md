@@ -1,5 +1,5 @@
 
-# pulumi-gcp-pufferpanel
+# GCP PufferPanel
 
 [![PyPI - Version](https://img.shields.io/pypi/v/pulumi-gcp-pufferpanel.svg)](https://pypi.python.org/pypi/pulumi-gcp-pufferpanel)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pulumi-gcp-pufferpanel.svg)](https://pypi.python.org/pypi/pulumi-gcp-pufferpanel)
@@ -14,7 +14,7 @@
 
 ## Description
 
-Pulumi ComponentResource for running [PufferPanel](https://github.com/PufferPanel/PufferPanel)
+Pulumi ComponentResource for running [PufferPanel](https://github.com/PufferPanel/PufferPanel) on GCP
 
 ## Useful links
 
