@@ -473,14 +473,14 @@ uritemplate = ">=3.0.0,<5"
 
 [[package]]
 name = "google-api-python-client-stubs"
-version = "1.7.1"
+version = "1.8.0"
 description = "Type stubs for google-api-python-client"
 category = "dev"
 optional = false
 python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-google-api-python-client = ">=2.23.0,<3.0.0"
+google-api-python-client = ">=2.29.0,<3.0.0"
 typing-extensions = ">=3.10.0,<4.0.0"
 
 [[package]]
@@ -1367,7 +1367,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "<4,>=3.7"
-content-hash = "c24d1d4ffb56f8bf60d25aaabdbf7b7f6161fc6451a676b2ec34b6f64a894124"
+content-hash = "2c9544673872ba71b7155c8e3df3577b1a389dcd22edd37784b0233214bfd451"
 
 [metadata.files]
 alabaster = [
@@ -1568,8 +1568,8 @@ google-api-python-client = [
     {file = "google_api_python_client-2.29.0-py2.py3-none-any.whl", hash = "sha256:dfac61ed108c111f6b6f768e545405ecab3621580e1fccac922e70c6c493c35f"},
 ]
 google-api-python-client-stubs = [
-    {file = "google-api-python-client-stubs-1.7.1.tar.gz", hash = "sha256:59d2bd0d77e4b40fee5e9f8531eae1bee536e64e972ca2b76d8068a4f2a9e661"},
-    {file = "google_api_python_client_stubs-1.7.1-py3-none-any.whl", hash = "sha256:42bdde2ec8db24bae6cee17863dfaf0652dd8b004f05509cc1a789ef5059a7a0"},
+    {file = "google-api-python-client-stubs-1.8.0.tar.gz", hash = "sha256:5e4ffd3bd1096dc8d017a0c2b657ddcdfa61c13df148c245561d47d8bc310559"},
+    {file = "google_api_python_client_stubs-1.8.0-py3-none-any.whl", hash = "sha256:62c3cf5ec3e25bfa1974d1c781f9be6e76b640dd851701973419caacc7c214d5"},
 ]
 google-auth = [
     {file = "google-auth-2.3.3.tar.gz", hash = "sha256:d83570a664c10b97a1dc6f8df87e5fdfff012f48f62be131e449c20dfc32630e"},
