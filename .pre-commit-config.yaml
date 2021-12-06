@@ -8,12 +8,12 @@ repos:
       - id: check-merge-conflict
       - id: check-json
       - id: end-of-file-fixer
--   repo: https://github.com/timothycrosley/isort
-    rev: 5.9.3
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.10.1
     hooks:
       - id: isort
 -   repo: https://github.com/psf/black
-    rev: 21.10b0
+    rev: 21.12b0
     hooks:
       - id: black
 -   repo: local
