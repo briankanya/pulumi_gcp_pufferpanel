@@ -34,7 +34,7 @@ python = "<4,>=3.7"
 Flask = "^2.0.2"
 black = "^21.12b0"
 bump2version = "^1.0.1"
-coverage = {version = "^6.1", extras = ["toml"]}
+coverage = {version = "^6.2", extras = ["toml"]}
 darglint = "^1.8.0"
 flake8 = "^3.9.2"
 flake8-annotations = "^2.7.0"
