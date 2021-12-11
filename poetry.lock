@@ -1222,7 +1222,7 @@ python-versions = "*"
 
 [[package]]
 name = "types-flask"
-version = "1.1.4"
+version = "1.1.6"
 description = "Typing stubs for Flask"
 category = "dev"
 optional = false
@@ -1367,7 +1367,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "<4,>=3.7"
-content-hash = "e61e6b6de0dc2d961f47e7d7c4a3646c1e7438fafdddca95118d551962846cfa"
+content-hash = "e2b4632ba531c3f458ae3810c3fefe529f257675e2eea736595735e3fdbe4330"
 
 [metadata.files]
 alabaster = [
@@ -2107,8 +2107,8 @@ types-click = [
     {file = "types_click-7.1.7-py3-none-any.whl", hash = "sha256:64dd3dc1fe5ed7e105b7a0479a6aebdd3c132c474c54f42a744af1bfba1989fd"},
 ]
 types-flask = [
-    {file = "types-Flask-1.1.4.tar.gz", hash = "sha256:09306465574a1b42c48fa4a83458fbb0cd9a46df20f6901e4bf148550126cc85"},
-    {file = "types_Flask-1.1.4-py3-none-any.whl", hash = "sha256:ed06c39b5838eed4e099c5fc0117714097975d86177b1663c4fb547a5f7ff298"},
+    {file = "types-Flask-1.1.6.tar.gz", hash = "sha256:aac777b3abfff9436e6b01f6d08171cf23ea6e5be71cbf773aaabb1c5763e9cf"},
+    {file = "types_Flask-1.1.6-py3-none-any.whl", hash = "sha256:6ab8a9a5e258b76539d652f6341408867298550b19b81f0e41e916825fc39087"},
 ]
 types-jinja2 = [
     {file = "types-Jinja2-2.11.8.tar.gz", hash = "sha256:8331174ba46bc4570b65edc5c6828bb0aec8a93b1e487fc5e878aad5e373ae21"},
