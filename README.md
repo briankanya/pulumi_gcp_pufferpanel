@@ -26,10 +26,6 @@ Pulumi ComponentResource for running [PufferPanel](https://github.com/PufferPane
 
 * TODO
 
-## Quickstart
-
-TODO
-
 ## Credits
 
 This package was created with [Cookiecutter][cookiecutter] and the [fedejaure/cookiecutter-modern-pypackage][cookiecutter-modern-pypackage] project template.
