@@ -1,0 +1,24 @@
+{
+  "template": "https://github.com/fedejaure/cookiecutter-modern-pypackage",
+  "commit": "35aff5c094d5d940b6c2e305d7cd43f0466139b0",
+  "context": {
+    "cookiecutter": {
+      "full_name": "Brian Kanya",
+      "email": "briankanya@gmail.com",
+      "github_username": "briankanya",
+      "project_name": "pulumi-gcp-pufferpanel",
+      "project_slug": "pulumi_gcp_pufferpanel",
+      "project_title": "Pulumi GCP PufferPanel",
+      "project_short_description": "Pulumi ComponentResource for running PufferPanel on GCP",
+      "version": "0.0.1",
+      "open_source_license": "GNU General Public License v3",
+      "command_line_interface": "No command-line interface",
+      "add_code_of_conduct": "n",
+      "add_contributing_file": "y",
+      "add_security_file": "y",
+      "contact_method": "Email",
+      "_template": "https://github.com/fedejaure/cookiecutter-modern-pypackage"
+    }
+  },
+  "directory": null
+}
