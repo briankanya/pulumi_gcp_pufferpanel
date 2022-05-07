@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  dev:
+    build:
+      args:
+        PYPI_TOKEN: $PYPI_TOKEN
+      context: .
+      target: dev
+    tty: true
+    entrypoint: []
+    command:
+      [
+        "sh",
+        "-c",
+        "cp --update /var/lib/poetry/poetry.lock /app/ && cp --update /var/lib/git/* /app/.git/hooks/ && sleep infinity"
+      ]
+    environment:
+      - SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock
+    volumes:
+      # app
+      - .:/app/:cached
+      # git
+      - ~/.gitconfig:/etc/gitconfig:cached
+      # ssh
+      - ${SSH_AGENT_AUTH_SOCK:-/run/host-services/ssh-auth.sock}:/run/host-services/ssh-auth.sock:cached
+      - ~/.ssh/known_hosts:/root/.ssh/known_hosts:cached
