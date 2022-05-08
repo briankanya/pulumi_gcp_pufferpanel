@@ -31,7 +31,7 @@ pulumi-gcp = "^6.23.0"
 
 [tool.poetry.dev-dependencies]
 Flask = "^2.0.2"
-bandit = "1.7.2"
+bandit = "1.7.4"
 black = "^21.12b0"
 bump2version = "^1.0.1"
 coverage = {version = "^6.2", extras = ["toml"]}
