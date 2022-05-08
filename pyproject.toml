@@ -26,9 +26,8 @@ repository = "https://github.com/briankanya/pulumi-gcp-pufferpanel"
 "Bug Tracker" = "https://github.com/briankanya/pulumi-gcp-pufferpanel/issues"
 
 [tool.poetry.dependencies]
-pulumi = "^3.17.0"
-pulumi-gcp = ">=5.19,<7.0"
 python = "<4,>=3.7"
+pulumi-gcp = "^6.23.0"
 
 [tool.poetry.dev-dependencies]
 Flask = "^2.0.2"
