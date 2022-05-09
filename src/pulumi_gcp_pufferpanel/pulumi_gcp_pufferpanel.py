@@ -122,7 +122,7 @@ class PufferPanel(ComponentResource):
         )
 
     def __create_code_bucket(self) -> Bucket:
-        return Bucket("pufferpanel-bucket", force_destroy=True)
+        return Bucket("pufferpanel-bucket", force_destroy=True, location="US")
 
     def __create_code_bucket_object(self, bucket: Bucket) -> BucketObject:
         return BucketObject(
