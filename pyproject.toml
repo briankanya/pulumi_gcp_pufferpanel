@@ -3,7 +3,7 @@
 authors = ["Brian Kanya <briankanya@gmail.com>"]
 description = "Pulumi ComponentResource for running PufferPanel on GCP"
 name = "pulumi-gcp-pufferpanel"
-version = "0.0.1"
+version = "0.1.0"
 
 classifiers = [
   "Development Status :: 2 - Pre-Alpha",
