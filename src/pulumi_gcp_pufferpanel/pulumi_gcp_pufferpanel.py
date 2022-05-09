@@ -24,8 +24,8 @@ class PufferPanel(ComponentResource):
     """
 
     AVAILABLE_MEMORY_MB = 128
-    FUNCTION_RUNTIME = "python37"
-    IMAGE_FAMILY = "debian-10"
+    FUNCTION_RUNTIME = "python39"
+    IMAGE_FAMILY = "debian-11"
     IMAGE_PROJECT = "debian-cloud"
     INGRESS_SETTINGS = "ALLOW_ALL"
 
