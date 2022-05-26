@@ -7,7 +7,7 @@ from pulumi import ComponentResource, ResourceOptions
 from pulumi.asset import FileArchive
 from pulumi_gcp.cloudfunctions import Function, FunctionIamMember
 from pulumi_gcp.compute import AwaitableGetImageResult, Disk, get_image
-from pulumi_gcp.config import zone  # type: ignore
+from pulumi_gcp.config import project, zone  # type: ignore
 from pulumi_gcp.storage import Bucket, BucketObject
 
 
@@ -152,6 +152,7 @@ class PufferPanel(ComponentResource):
                 "DISK_ID": disk.id,
                 "DNS_NAME": dns_name,
                 "DNS_ZONE": dns_zone,
+                "GCP_PROJECT": project,
                 "MACHINE_TYPE": machine_type,
                 "SERVER_NAME": server_name,
                 "ZONE": zone,
