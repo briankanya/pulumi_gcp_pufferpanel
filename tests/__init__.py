@@ -1,1 +1,1 @@
-"""Unit test package for pulumi_gcp_pufferpanel."""
+"""Pulumi GCP PufferPanel test suite."""
