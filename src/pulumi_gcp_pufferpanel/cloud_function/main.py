@@ -2,23 +2,24 @@
 
 import os
 import time
+from typing import Any, Dict, Tuple
 
-from flask import Request  # type: ignore
-from google.cloud.dns import Client  # type: ignore
-from googleapiclient.discovery import Resource, build  # type: ignore
-from googleapiclient.errors import HttpError  # type: ignore
+from flask import Request
+from google.cloud.dns import Client
+from googleapiclient.discovery import Resource, build
+from googleapiclient.errors import HttpError
 
 
-def __create_instance(
+def _create_instance(
     compute: Resource,
     disk_id: str,
     machine_type: str,
     project: str,
     server_name: str,
     zone: str,
-) -> dict:
+) -> Dict[str, Any]:
     machine_type = f"zones/{zone}/machineTypes/{machine_type}"
-    startup = open("startup.sh", "r").read()
+    startup = open("startup.sh").read()
 
     config = {
         "name": server_name,
@@ -61,33 +62,37 @@ def __create_instance(
         },
     }
 
-    return compute.instances().insert(project=project, zone=zone, body=config).execute()
+    return compute.instances().insert(project=project, zone=zone, body=config).execute()  # type: ignore[attr-defined, no-any-return]
 
 
-def __delete_instance(compute: Resource, project: str, server_name: str, zone: str) -> dict:
-    return compute.instances().delete(project=project, zone=zone, instance=server_name).execute()
+def _delete_instance(
+    compute: Resource, project: str, server_name: str, zone: str
+) -> Dict[str, Any]:
+    return compute.instances().delete(project=project, zone=zone, instance=server_name).execute()  # type: ignore[attr-defined, no-any-return]
 
 
-def __get_instance(compute: Resource, project: str, server_name: str, zone: str) -> dict:
-    return compute.instances().get(project=project, zone=zone, instance=server_name).execute()
+def _get_instance(compute: Resource, project: str, server_name: str, zone: str) -> Dict[str, Any]:
+    return compute.instances().get(project=project, zone=zone, instance=server_name).execute()  # type: ignore[attr-defined, no-any-return]
 
 
-def __wait_for_operation(compute: Resource, project: str, operation: dict, zone: str) -> dict:
+def _wait_for_operation(
+    compute: Resource, project: str, operation: Dict[str, str], zone: str
+) -> Dict[str, Any]:
     while True:
         result = (
-            compute.zoneOperations().get(project=project, zone=zone, operation=operation).execute()
+            compute.zoneOperations().get(project=project, zone=zone, operation=operation).execute()  # type: ignore[attr-defined]
         )
 
         if result["status"] == "DONE":
             if "error" in result:
                 raise ValueError(result["error"])
 
-            return result
+            return result  # type: ignore[no-any-return]
 
         time.sleep(1)
 
 
-def __create_record(dns_name: str, dns_zone: str, project: str, ip: str) -> None:
+def _create_record(dns_name: str, dns_zone: str, project: str, ip: str) -> None:
     dns_client = Client(project=project)
     zone = dns_client.zone(name=dns_zone)
     changes = zone.changes()
@@ -101,7 +106,7 @@ def __create_record(dns_name: str, dns_zone: str, project: str, ip: str) -> None
     changes.create()
 
 
-def http(_: Request) -> tuple:
+def http(_: Request) -> Tuple[str, int]:
     """Associate PufferPanel server public ip with given dns name."""
     compute = build("compute", "v1")
     disk_id = os.environ["DISK_ID"]
@@ -118,18 +123,18 @@ def http(_: Request) -> tuple:
     operation = None
 
     try:
-        instance = __get_instance(compute, project, server_name, zone)
-        operation = __delete_instance(compute, project, instance["name"], zone)
+        instance = _get_instance(compute, project, server_name, zone)
+        operation = _delete_instance(compute, project, instance["name"], zone)
     except HttpError:
-        operation = __create_instance(compute, disk_id, machine_type, project, server_name, zone)
+        operation = _create_instance(compute, disk_id, machine_type, project, server_name, zone)
 
     if operation:
-        __wait_for_operation(compute, project, operation["name"], zone)
+        _wait_for_operation(compute, project, operation["name"], zone)
         response_message += f"{operation['operationType']}d {server_name}"
 
         if "insert" in response_message:
             response_message = response_message.replace("insert", "create")
-            instance = __get_instance(compute, project, server_name, zone)
+            instance = _get_instance(compute, project, server_name, zone)
             ip = (
                 instance.pop("networkInterfaces", [{}])
                 .pop(0)
@@ -137,6 +142,6 @@ def http(_: Request) -> tuple:
                 .pop(0)
                 .pop("natIP", None)
             )
-            __create_record(dns_name, dns_zone, project, ip)
+            _create_record(dns_name, dns_zone, project, ip)
 
     return (response_message, response_status_code)
