@@ -68,7 +68,7 @@ python-versions = ">=3.5"
 dev = ["cloudpickle", "coverage[toml] (>=5.0.2)", "furo", "hypothesis", "mypy (>=0.900,!=0.940)", "pre-commit", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "sphinx", "sphinx-notfound-page", "zope.interface"]
 docs = ["furo", "sphinx", "sphinx-notfound-page", "zope.interface"]
 tests = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "zope.interface"]
-tests_no_zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
+tests-no-zope = ["cloudpickle", "coverage[toml] (>=5.0.2)", "hypothesis", "mypy (>=0.900,!=0.940)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins"]
 
 [[package]]
 name = "bandit"
@@ -165,7 +165,7 @@ optional = false
 python-versions = ">=3.6.0"
 
 [package.extras]
-unicode_backport = ["unicodedata2"]
+unicode-backport = ["unicodedata2"]
 
 [[package]]
 name = "click"
@@ -563,7 +563,7 @@ six = ">=1.9.0"
 
 [package.extras]
 aiohttp = ["aiohttp (>=3.6.2,<4.0.0dev)", "requests (>=2.20.0,<3.0.0dev)"]
-enterprise_cert = ["cryptography (==36.0.2)", "pyopenssl (==22.0.0)"]
+enterprise-cert = ["cryptography (==36.0.2)", "pyopenssl (==22.0.0)"]
 pyopenssl = ["pyopenssl (>=20.0.0)"]
 reauth = ["pyu2f (>=0.1.5)"]
 
@@ -698,9 +698,9 @@ python-versions = ">=3.6.1,<4.0"
 
 [package.extras]
 colors = ["colorama (>=0.4.3,<0.5.0)"]
-pipfile_deprecated_finder = ["pipreqs", "requirementslib"]
+pipfile-deprecated-finder = ["pipreqs", "requirementslib"]
 plugins = ["setuptools"]
-requirements_deprecated_finder = ["pip-api", "pipreqs"]
+requirements-deprecated-finder = ["pip-api", "pipreqs"]
 
 [[package]]
 name = "itsdangerous"
@@ -911,7 +911,7 @@ pastel = ">=0.2.1,<0.3.0"
 tomli = ">=1.2.2"
 
 [package.extras]
-poetry_plugin = ["poetry (>=1.0,<2.0)"]
+poetry-plugin = ["poetry (>=1.0,<2.0)"]
 
 [[package]]
 name = "pprintpp"
@@ -975,7 +975,7 @@ six = ">=1.12.0"
 
 [[package]]
 name = "pulumi-gcp"
-version = "6.38.0"
+version = "6.45.0"
 description = "A Pulumi package for creating and managing Google Cloud Platform resources."
 category = "main"
 optional = false
@@ -1233,7 +1233,7 @@ urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
-use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
 name = "restructuredtext-lint"
@@ -2074,7 +2074,7 @@ pulumi = [
     {file = "pulumi-3.33.1-py2.py3-none-any.whl", hash = "sha256:931d838dabb85db663cf359a43d2b0e9f5c0903a488a798de6c57a34ced479b6"},
 ]
 pulumi-gcp = [
-    {file = "pulumi_gcp-6.38.0.tar.gz", hash = "sha256:bce8b3c39add342c70562f9b8220376c1fe028024fb58bf089f52da01d2a8bbd"},
+    {file = "pulumi_gcp-6.45.0.tar.gz", hash = "sha256:4813386784569d6a772b90995a632b91906f30d552a3cf633aa2ad1af7001b34"},
 ]
 py = [
     {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
